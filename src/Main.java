@@ -17,7 +17,7 @@ public class Main {
     }
 
     public static String upg88() {
-        String Format = "yyyy/MM/dd HH:mm:ss";
+        String Format = "yyyy/MM/dd";
         Date currentDate = Calendar.getInstance().getTime();
         DateFormat DF = new SimpleDateFormat(Format);
         return (DF.format(currentDate));
