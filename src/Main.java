@@ -1,17 +1,25 @@
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import javax.swing.*;
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.time.LocalTime;
+import java.util.Calendar;
+
 public class Main {
-    public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+    public static void main(String[] arg) {
+        JOptionPane.showMessageDialog(null, upg87());
+        JOptionPane.showMessageDialog(null, upg88());
+    }
 
-        // Press Skift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
+    public static String upg87() {
+        LocalTime currentTime = LocalTime.now();
+        return (currentTime.toString());
+    }
 
-            // Press Skift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+    public static String upg88() {
+        String Format = "yyyy/MM/dd HH:mm:ss";
+        Date currentDate = Calendar.getInstance().getTime();
+        DateFormat DF = new SimpleDateFormat(Format);
+        return (DF.format(currentDate));
     }
 }
