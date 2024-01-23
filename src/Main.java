@@ -6,8 +6,6 @@ public class Main {
     public static void main(String[] arg) {
         System.out.println(upg87());
         System.out.println(upg88());
-        JOptionPane.showMessageDialog(null, upg87());
-        JOptionPane.showMessageDialog(null, upg88());
     }
 
     public static String upg87() {
