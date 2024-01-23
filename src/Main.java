@@ -1,25 +1,39 @@
 import javax.swing.*;
-import java.util.Date;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.time.LocalTime;
 import java.util.Calendar;
 
 public class Main {
     public static void main(String[] arg) {
+        System.out.println(upg87());
+        System.out.println(upg88());
         JOptionPane.showMessageDialog(null, upg87());
         JOptionPane.showMessageDialog(null, upg88());
     }
 
     public static String upg87() {
-        LocalTime currentTime = LocalTime.now();
-        return (currentTime.toString());
+        return (LocalTime.now().toString());
     }
 
     public static String upg88() {
-        String Format = "yyyy/MM/dd";
-        Date currentDate = Calendar.getInstance().getTime();
-        DateFormat DF = new SimpleDateFormat(Format);
-        return (DF.format(currentDate));
+        String date = Calendar.getInstance().getTime().toString();
+        String[] montharray = new String[]{("Jan"), ("Feb"), ("Mar"), ("Apr"), ("May"), ("Jun"), ("Jul"), ("Aug"), ("Sep"), ("Oct"), ("Nov"), ("Dec")};
+        String[] datearray = date.split(" ");
+
+        String month = null;
+        String day = datearray[2];
+        String year = datearray[5];
+
+        for (int i = 0; i<12; i++) {
+            if (date.contains(montharray[i])) {
+                i++;
+                if (i < 10) {
+                    month = ("0"+ String.valueOf(i));
+                }
+                else {
+                    month = String.valueOf(i);
+                }
+            }
+        }
+        return (year + "/" + month + "/" + day);
     }
 }
