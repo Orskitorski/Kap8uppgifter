@@ -1,4 +1,3 @@
-import javax.swing.*;
 import java.time.LocalTime;
 import java.util.Calendar;
 
@@ -25,7 +24,7 @@ public class Main {
             if (date.contains(montharray[i])) {
                 i++;
                 if (i < 10) {
-                    month = ("0"+ String.valueOf(i));
+                    month = ("0"+ i);
                 }
                 else {
                     month = String.valueOf(i);
