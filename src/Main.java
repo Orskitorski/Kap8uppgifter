@@ -32,6 +32,6 @@ public class Main {
                 }
             }
         }
-        return (year + "/" + month + "/" + day);
+        return (year + "-" + month + "-" + day);
     }
 }
